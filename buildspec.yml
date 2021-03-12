@@ -6,14 +6,12 @@ phases:
       java: corretto11
     commands:
       - echo Entering install phase...
-      - echo "Installing corretto(OpenJDK) version 11 ..."
-      - export JAVA_HOME="$JDK_11_HOME"
-      - export JRE_HOME="$JRE_11_HOME"
-      - export JDK_HOME="$JDK_11_HOME"
-      - wget https://mirror.jframeworks.com/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
-      - tar xzvf apache-maven-3.6.3-bin.tar.gz -C /opt/
-      - export PATH="$JDK_11_HOME"/bin:/opt/apache-maven-3.6.3/bin:$PATH
-      - export MAVEN_HOME=/opt/apache-maven-3.6.3
+      - apt-get update -y
+      - apt-get install -y software-properties-common
+      - add-apt-repository ppa:openjdk-r/ppa
+      - apt-get update -y
+      - apt-get install -y openjdk-8-jdk
+      - apt-get install -y maven
   build:
     commands:
       - echo Build started on `date`
