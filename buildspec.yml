@@ -3,11 +3,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto15
+      java: corretto11
+    commands:
+      - echo Entering install phase...
+      - wget https://mirror.jframeworks.com/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+      - tar xzvf apache-maven-3.6.3-bin.tar.gz -C /opt/
+      - export PATH=/opt/apache-maven-3.6.3/bin:$PATH
+      - export MAVEN_HOME=/opt/apache-maven-3.6.3
   build:
     commands:
-      - export MAVEN_HOME=/opt/apache-maven-3.6.3
-      - export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/opt/apache-maven-3.6.3/bin
       - echo Build started on `date`
       - echo $PATH
       - echo $MAVEN_HOME
