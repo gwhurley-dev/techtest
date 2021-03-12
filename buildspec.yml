@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
+      java: corretto15
   build:
     commands:
       - export MAVEN_HOME=/opt/apache-maven-3.6.3
@@ -13,9 +13,10 @@ phases:
       - echo $MAVEN_HOME
       - ls /opt
       - hostname
-      - /opt/apache-maven-3.6.3/bin/mvn compile
-      - /opt/apache-maven-3.6.3/bin/mvn package
-      - /opt/apache-maven-3.6.3/bin/mvn test 
+      - ifconfig
+      - mvn compile
+      - mvn package
+      - mvn test 
   post_build:
     commands:
       - echo Build completed on `date`
