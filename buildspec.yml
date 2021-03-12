@@ -6,7 +6,11 @@ phases:
       java: corretto8
   build:
     commands:
+      - export MAVEN_HOME=/opt/apache-maven-3.6.3
+      - export PATH=/sbin:/usr/sbin:/bin:/usr/bin:/opt/apache-maven-3.6.3/bin
       - echo Build started on `date`
+      - mvn compile
+      - mvn package
       - mvn test 
   post_build:
     commands:
