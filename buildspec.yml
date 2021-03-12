@@ -11,6 +11,8 @@ phases:
       - echo Build started on `date`
       - echo $PATH
       - echo $MAVEN_HOME
+      - ls /opt
+      - hostname
       - /opt/apache-maven-3.6.3/bin/mvn compile
       - /opt/apache-maven-3.6.3/bin/mvn package
       - /opt/apache-maven-3.6.3/bin/mvn test 
