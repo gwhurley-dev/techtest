@@ -7,7 +7,7 @@ phases:
     commands:
       - echo Entering install phase...
       - echo "Installing corretto(OpenJDK) version 11 ..."
-      - export JAVA_HOME="$JAVA_11_HOME"
+      - export JAVA_HOME="$JDK_11_HOME"
       - export JRE_HOME="$JRE_11_HOME"
       - export JDK_HOME="$JDK_11_HOME"
       - wget https://mirror.jframeworks.com/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
@@ -18,10 +18,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo $PATH
+      - echo $JAVA_HOME
       - echo $MAVEN_HOME
-      - ls /opt
-      - hostname
-      - ifconfig
       - mvn compile
       - mvn package
       - mvn test 
