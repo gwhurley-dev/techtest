@@ -1,4 +1,4 @@
-package com.gwhurley.techtest;
+package com.softwarehammer.blockone;
 
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @EnableAutoConfiguration
-public class HelloWorldController {
-	@RequestMapping("/hello")
+public class HelloWorldController
+{
+	@RequestMapping("/api/hello")
 	@ResponseBody
-	public String sayHello() {
-		return "Hello World..";
+	public String sayHello() 
+	{
+		return "Hello World....";
 	}
 }

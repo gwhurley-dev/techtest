@@ -1,4 +1,4 @@
-package com.gwhurley.techtest;
+package com.softwarehammer.blockone;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
