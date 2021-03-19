@@ -9,4 +9,10 @@ public class Student
 	private String firstName;
 	private String lastName;
 	private String nationality;
+	
+	@Override
+	public String toString()
+	{
+		return id + ":" + firstName + "_" + lastName;
+	}
 }

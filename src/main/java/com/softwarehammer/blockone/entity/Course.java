@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Course
 {
-	private int id;
+	private long id;
 	private String code;
 	private int credits;
 }
