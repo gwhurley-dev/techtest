@@ -20,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.softwarehammer.blockone.dao.CourseDao;
 import com.softwarehammer.blockone.entity.Course;
 
+/**
+ * REST operations for Courses.
+ */
 @Controller
 @EnableAutoConfiguration
 public class CourseController

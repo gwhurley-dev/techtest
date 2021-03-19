@@ -20,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.softwarehammer.blockone.dao.StudentDao;
 import com.softwarehammer.blockone.entity.Student;
 
+/**
+ * REST operations for Students.
+ */
 @Controller
 @EnableAutoConfiguration
 public class StudentController

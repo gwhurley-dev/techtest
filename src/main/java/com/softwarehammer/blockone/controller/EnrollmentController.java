@@ -24,6 +24,9 @@ import com.softwarehammer.blockone.dao.EnrollmentDao;
 import com.softwarehammer.blockone.entity.Course;
 import com.softwarehammer.blockone.entity.Enrollment;
 
+/**
+ * REST operations for Enrollments
+ */
 @Controller
 @EnableAutoConfiguration
 public class EnrollmentController
@@ -43,6 +46,9 @@ public class EnrollmentController
     	this.enrollmentBO = enrollmentBO;
     }
     
+    /**
+     * Returns all Courses that a Student has registered for the specified Semester.
+     */
 	@GetMapping("/api/enrollment/student/{studentId}/semester/{semesterId}")
     public ResponseEntity<List<Course>> getEnrolledClasses(@PathVariable Long studentId, @PathVariable Long semesterId)
 	{
@@ -53,6 +59,9 @@ public class EnrollmentController
 	    return new ResponseEntity<List<Course>>(enrolled, HttpStatus.OK);	
 	}
 
+	/**
+	 * Returns all Courses that a Student has ever registered for.
+	 */
 	@GetMapping("/api/enrollment/student/{studentId}")
     public ResponseEntity<List<Course>> getEnrollmentHistory(@PathVariable Long studentId)
 	{

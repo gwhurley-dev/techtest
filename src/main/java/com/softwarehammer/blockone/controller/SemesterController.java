@@ -20,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.softwarehammer.blockone.dao.SemesterDao;
 import com.softwarehammer.blockone.entity.Semester;
 
+/**
+ * REST operations for Semesters.
+ */
 @Controller
 @EnableAutoConfiguration
 public class SemesterController
