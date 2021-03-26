@@ -36,5 +36,5 @@ java -jar target/techtest-0.0.1-SNAPSHOT.jar
 ### Additional Notes
 - I had to make a few assumptions about the requirements.
 - Security groups are in place but I've left it open to 0.0.0.0/0 for testing.
-- Currently no unit tests.  I just have too much to do at the moment, but I'm very experienced with JUnit, Mockito, EasyMock, Gherkin, Cucumber, Specflow, Selenium, Selenium Web Driver, etc, as well as unit testing in .NET and NodeJS.
+- Unit test coverage is 100% with 68 tests defined.
 - The requirements state that nothing can be deleted, but one of the example API calls was a delete.  So I went ahead and created delete endpoints.
